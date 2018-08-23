@@ -1,7 +1,7 @@
 "use strict";
 {
   let loadInventory = function() {
-    let url = "http://5b79be6cfb11c800145362ab.mockapi.io/products";
+    let url = "https://5b79be6cfb11c800145362ab.mockapi.io/products";
 
     fetch(url, {
       method: "GET"
@@ -75,7 +75,7 @@
 
   let deleteInventoryItem = function() {
     let userDeleteInput = document.getElementById("userDeleteInput").value;
-    const url = `http://5b79be6cfb11c800145362ab.mockapi.io/products/${userDeleteInput}`;
+    const url = `https://5b79be6cfb11c800145362ab.mockapi.io/products/${userDeleteInput}`;
 
     fetch(url, {
       method: "DELETE"
@@ -92,7 +92,7 @@
   };
 
   let addInventoryItem = function() {
-    let url = "http://5b79be6cfb11c800145362ab.mockapi.io/products";
+    let url = "https://5b79be6cfb11c800145362ab.mockapi.io/products";
     let productName = document.getElementById('userAddName').value;
     let productSize = document.getElementById('userAddSize').value;
     let productColor = document.getElementById('userAddColor').value;
@@ -134,7 +134,7 @@
 
   let updateInventoryItem = function() {
     let updateItem = document.getElementById('productId').value;  
-    let url = `http://5b79be6cfb11c800145362ab.mockapi.io/products/${updateItem}`;
+    let url = `https://5b79be6cfb11c800145362ab.mockapi.io/products/${updateItem}`;
     let productName = document.getElementById('updateName').value;
     let productSize = document.getElementById('updateSize').value;
     let productColor = document.getElementById('updateColor').value;
