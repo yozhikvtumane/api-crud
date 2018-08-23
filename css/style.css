@@ -98,6 +98,7 @@
   }
   .tab-pane {
       text-align: left;
+      overflow: scroll;
       margin-top: 15px;
       font-size: 25px;
   }
