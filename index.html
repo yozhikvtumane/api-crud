@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>API All verbs with Mock API</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- Font Awesome https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+  <!-- Custom CSS file -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-table.css" rel="stylesheet">
+  <link href="css/style-flyout.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flyout-overlay" id="flyoutLevelTwo"></div>
+  <div class="main-flex-container">
+
+    <div class="side-menu">
+
+      <div class="top-nav-icons">
+        <div class="icon-active">
+          <a href="#" id="home">
+            <i class="fas fa-home fa-2x menu-icons"></i>
+          </a>
+        </div>
+        <div id="register">
+          <a href="#">
+            <i class="fas fa-laptop fa-2x menu-icons"></i>
+          </a>
+        </div>
+        <div id="search">
+          <a href="#">
+            <i class="fas fa-search fa-2x menu-icons"></i>
+          </a>
+        </div>
+
+      </div>
+      <div class="bottom-nav-icons">
+        <a href="#">
+          <i class="far fa-question-circle fa-2x menu-icons"></i>
+        </a>
+        <a href="#">
+          <i class="far fa-user fa-2x menu-icons"></i>
+        </a>
+      </div>
+    </div>
+    <!-- End side menu -->
+
+    <div class="main">
+      <div class="flyout-menu" id="flyoutLevelOne">
+        <a href="">
+          <i class="fas fa-times fa-lg close-flyout" id="closeFlyout"></i>
+        </a>
+
+
+        <div id="homeContent" class="homeContent">This is home content</div>
+
+        <div id="registerContent" class="registerContent">This is register content</div>
+
+        <div id="searchContent" class="searchContent">This is search content</div>
+
+      </div>
+
+      <!-- might need once we add items in sales style="overflow:auto" -->
+      <header class="main-searchbar boxshadow">
+        <div class="form-group col-md-8 main-search-input">
+          <input class="form-control form-control-md mainSearch" id="inputlg" type="text" placeholder="Scan in barcode or search for a product">
+          <!-- <span class="form-group-append">
+                    <button class="btn btn-outline-secondary border-left-0 border mainSearchBtn" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                  </span> -->
+        </div>
+        <div class="client-logo-container">
+          <!-- <img src="/img/mralans-logo-260x50.png" alt="" class="client-logo"> -->
+          <h2 class="client-logo">Mr Alan's</h2>
+        </div>
+      </header>
+
+      <section class="main-body">
+
+        <div class="tab-container boxshadow">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-inventory-tab" data-toggle="tab" href="#nav-inventory" role="tab" aria-controls="nav-inventory"
+                aria-selected="true">Inventory</a>
+              <a class="nav-item nav-link" id="nav-addInventory-tab" data-toggle="tab" href="#nav-addInventory" role="tab" aria-controls="nav-addInventory"
+                aria-selected="false">Add Inventory</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane show active" id="nav-inventory" role="tabpanel" aria-labelledby="nav-inventory-tab">
+              Inventory
+              <div id="inventory"></div>
+
+            </div>
+            <div class="tab-pane" id="nav-addInventory" role="tabpanel" aria-labelledby="nav-addInventory-tab">Add Inventory
+              <label>Product Name</label>
+              <input type="text" class="form-control" id="userAddName">
+              <label>Size</label>
+              <input type="text" class="form-control" id="userAddSize">
+              <label>Color</label>
+              <input type="text" class="form-control" id="userAddColor">
+              <label>Price</label>
+              <input type="text" class="form-control" id="userAddPrice">
+              <label>Amount Available</label>
+              <input type="text" class="form-control" id="userAddAmountAvail">
+
+              <button type="button" class="btn btn-secondary side-btns updateButton" value="10" id="addButton">Add</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <aside class="right-payment-container boxshadow">
+            <div class="right-payment">
+              <h5>Delete Item by ID</h5>
+              <input type="number" class="form-control" id="userDeleteInput">
+              <button type="button" class="btn btn-secondary side-btns updateButton" value="10" id="deleteButton">Delete</button>
+              <br>
+              <br>
+              <h5>Update Product</h5>
+              <label>Product ID</label>
+              <input type="number" class="form-control" id="productId">
+              <label>Product Name</label>
+              <input type="text" class="form-control" id="updateName">
+              <label>Size</label>
+              <input type="number" class="form-control" id="updateSize">
+              <label>Color</label>
+              <input type="text" class="form-control" id="updateColor">
+              <label>Price</label>
+              <input type="number" class="form-control" id="updatePrice">
+              <label>Amount Available</label>
+              <input type="number" class="form-control" id="updateAmountAvail">
+
+              <button type="button" class="btn btn-secondary side-btns updateButton" value="10" id="updateButton">Update</button>
+
+            </div>
+          </aside>
+
+          <!-- <aside class="right-payment-container boxshadow">
+          <div class="right-payment">
+            <ul class="list-group list-group-flush payment-totals-container">
+              <li class="list-group-item payment-totals">Subtotal:
+                <span></span>
+              </li>
+              <li class="list-group-item payment-totals">Tax:
+                <span></span>
+              </li>
+              <li class="list-group-item payment-totals">Total:
+                <span></span>
+              </li>
+              <li class="list-group-item payment-totals">Amount Due:
+                <span></span>
+              </li>
+            </ul>
+            <div class=""></div>
+            <button type="button" class="btn btn-success side-btns">Pay</button>
+            <button type="button" class="btn btn-danger side-btns">Cancel Order</button>
+          </div>
+        </aside> -->
+        </div>
+
+      </section>
+    </div>
+    <!-- End main -->
+  </div>
+  <!-- End main flex container -->
+
+
+
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom Script File-->
+  <script src="js/script.js"></script>
+  <script src="js/inventory.js"></script>
+
+</body>
+
+
+</html>

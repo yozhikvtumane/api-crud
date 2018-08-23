@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Backbone POS v2</title>
+  <!-- Bootstrap -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- Font Awesome https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Custom CSS file -->
+  
+   <link href="css/style.css" rel="stylesheet">
+   <link href="css/style-flyout.css" rel="stylesheet">
+  <link href="css/pos-landing.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flyout-overlay" id="flyoutLevelTwo"></div> 
+    <div class="main-flex-container">        
+
+        <div class="side-menu">
+
+            <div class="top-nav-icons">
+              <div class="icon-active"><a href="#" id="home">
+                <i class="fas fa-home fa-2x menu-icons"></i>
+              </a>
+            </div>
+            <div id="register">
+              <a href="#">
+                <i class="fas fa-laptop fa-2x menu-icons"></i>
+              </a>
+            </div>
+            <div id="search">
+              <a href="#">
+                <i class="fas fa-search fa-2x menu-icons"></i>
+              </a>
+            </div>
+      
+            </div>
+            <div class="bottom-nav-icons">
+              <a href="#">
+                <i class="far fa-question-circle fa-2x menu-icons"></i>
+              </a>
+              <a href="#">
+                <i class="far fa-user fa-2x menu-icons"></i>
+              </a>
+            </div>
+        </div>
+          <!-- End side menu -->
+          <div class="landing-main">
+              <div class="flyout-menu" id="flyoutLevelOne">
+                  <a href=""><i class="fas fa-times fa-lg close-flyout" id="closeFlyout"></i></a>
+                  
+         
+                  <div id="homeContent" class="homeContent">This is home content</div>
+         
+                  <div id="registerContent" class="registerContent">This is register content</div>
+         
+                  <div id="searchContent" class="searchContent">This is search content</div>
+         
+              </div>
+              <div class="landing-inner-content">
+              <header class="landing-header boxshadow">               
+                    <h2 class="client-logo">Mr Alan's</h2>
+              </header>
+
+              <section class="landing-search boxshadow">
+                <div class="action-btns">
+                  <a href="dashboard.html"><button type="button" class="btn btn-success">Quick Checkout</button></a>
+                  <button type="button" class="btn btn-secondary">Quick Return</button>
+                </div>
+                <div class="global-search">
+                  
+                        <form>
+                            <div class="form-row">
+                              <div class="col-7">
+                                <input type="" id="globalSearch"class="form-control" placeholder="Search by name, phone, email, UPC, SKU, product style ID or PFID">
+                              </div>
+                              <div class="col">
+                                  <button type="button" class="btn btn-primary" id="validateInput">Search</button>
+                              </div>                              
+                            </div>
+                          </form>
+                          <div class="hidden input-type">
+                              <p id="results"></p>
+                            <!-- <span>Input Type: xyzzzzz </span> -->
+                          </div>
+
+                </div>
+               
+                <div class="global-search-results">
+                    <table class="table">
+                        <tr>
+                          <th class="sales-tbl-heading">Tbl Heading</th>
+                          <th class="sales-tbl-heading">Tbl Heading</th>
+                          <th class="sales-tbl-heading">Tbl Heading</th>
+                          <th class="sales-tbl-heading">Tbl Heading</th>
+                          <th class="sales-tbl-heading">Tbl Heading</th>
+                        </tr>  
+                      </table>
+                </div>
+              </section>
+            </div>
+            <!-- End landing-inner-content ->
+
+
+
+
+
+
+
+          </div>
+          <!-- End landing-main -->
+
+
+
+
+      </div>
+      <!-- End main-flex-container-->
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Custom Script File-->
+  <script src="js/script.js"></script>
+  <script src="js/pos-landing.js"></script>
+
+</body>
+
+
+</html>
